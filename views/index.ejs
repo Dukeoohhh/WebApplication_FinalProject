@@ -2,43 +2,11 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' type="text/css"/>
   </head>
   <body>
 
-    <select name="flavor" id="flavor">
-      <option value="">Select Flavor</option>
-
-      <% for(var count = 0; count < flavor_data.length; count++) { %>
-
-        <option value="<%= flavor_data[count].Flavor_name %>">
-        <%= flavor_data[count].Flavor_name %></option>
-
-      <% } %>
-    </select>
-
-    <select name="package" id="package">
-      <option value="">Select Package</option>
-
-      <% for(var count = 0; count < package_data.length; count++) { %>
-
-        <option value="<%= package_data[count].Package_name %>">
-        <%= package_data[count].Package_name %></option>
-
-      <% } %>
-    </select>
-
-    <select name="topping" id="topping">
-      <option value="">Select Toppings</option>
-
-      <% for(var count = 0; count < topping_data.length; 
-      count++) { %>
-
-        <option value="<%= topping_data[count].Topping_name %>">
-        <%= topping_data[count].Topping_name %></option>
-
-      <% } %>
-    </select>
+    <p><a href="/en">Eng</a></p>
+    <p><a href="/th">Thai</a></p>
 
   </body>
 </html>

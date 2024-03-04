@@ -10,13 +10,6 @@ router.get('/', (req, res, next) => {
 
 router.get('/en', (req, res) => {
 
-  res.render('en/home',{title: "English"});
-        
-});
-
-
-router.get('/en/flavor', (req, res) => {
-
   const queryFlavors = 'select distinct * from flavors order by flavor_id';
   const queryPackages = 'select distinct * from packages order by package_id';
   const queryToppings = 'select distinct * from toppings order by topping_id';
@@ -39,13 +32,12 @@ router.get('/en/flavor', (req, res) => {
           return;
         }
 
-        res.render('en/flavor',
+        res.render('en/home',
           { title: 'English', flavor_data: fetchFlavors, package_data: fetchPackages, topping_data: fetchToppings });
       })
     });
   });
 });
-
 
 /* 
 *
@@ -78,7 +70,7 @@ router.get('/th', (req, res) => {
         }
 
         res.render('th/home',
-          { title: 'English', flavor_data: fetchFlavors, package_data: fetchPackages, topping_data: fetchToppings });
+          { title: 'Thai', flavor_data: fetchFlavors, package_data: fetchPackages, topping_data: fetchToppings });
       })
     });
   });

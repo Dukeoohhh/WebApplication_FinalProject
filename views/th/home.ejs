@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/home.css" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    <%= title %>
-  </title>
-  <link rel="stylesheet" href="/stylesheets/home.css" type="text/css" />
-</head>
-
-<body>
-  <div class="navbar">
-    <a href="#home">หน้าแรก</a>
-    <a href="#news">ข่าวสาร</a>
-    <div class="dropdown">
-      <button class="dropbtn">
-        🌐 ไทย
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="/th">ไทย</a>
-        <a href="/en">English</a>
+  <body>
+    <div class="navbar">
+      <a href="#home">หน้าแรก</a>
+      <a href="#news">ข่าวสาร</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          🌐 ไทย
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/th">🇹🇭 ไทย</a>
+          <a href="/en">English</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <select name="flavor" id="flavor">
-    <option value="">เลือกรสชาติ</option>
+    <select name="flavor" id="flavor">
+      <option value="">เลือกรสชาติ</option>
 
-    <% for(var count=0; count < flavor_data.length; count++) { %>
+      <% for(var count=0; count < flavor_data.length; count++) { %>
 
       <option value="<%= flavor_data[count].Flavor_nameTH %>">
         <%= flavor_data[count].Flavor_nameTH %>
       </option>
 
       <% } %>
-  </select>
+    </select>
 
-  <select name="package" id="package">
-    <option value="">เลือกภาชนะ</option>
+    <select name="package" id="package">
+      <option value="">เลือกภาชนะ</option>
 
-    <% for(var count=0; count < package_data.length; count++) { %>
+      <% for(var count=0; count < package_data.length; count++) { %>
 
       <option value="<%= package_data[count].Package_nameTH %>">
         <%= package_data[count].Package_nameTH %>
       </option>
 
       <% } %>
-  </select>
+    </select>
 
-  <select name="topping" id="topping">
-    <option value="">เลือกท๊อปปิ้ง</option>
+    <select name="topping" id="topping">
+      <option value="">เลือกท๊อปปิ้ง</option>
 
-    <% for(var count=0; count < topping_data.length; count++) { %>
+      <% for(var count=0; count < topping_data.length; count++) { %>
 
       <option value="<%= topping_data[count].Topping_nameTH %>">
         <%= topping_data[count].Topping_nameTH %>
       </option>
 
       <% } %>
-  </select>
-</body>
-
+    </select>
+  </body>
 </html>

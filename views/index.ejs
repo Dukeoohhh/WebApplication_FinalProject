@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+</head>
+
+<body>
+
+  <div class="navbar">
+    <ul>
+      <li :firstchild><a href="#home">HOME</a></li>
+      <li><a href="#menu">MENU</a></li>
+      <li><a href="#news">NEWS</a></li>
+      <li :lastchild style="float:right"><a class="active" href="#about">ABOUT</a></li>
+    </ul>
+  </div>
+
+  <select name="flavor" id="flavor">
+    <option value="">Select Flavor</option>
+
+    <% for(var count=0; count < flavor_data.length; count++) { %>
+
+      <option value="<%= flavor_data[count].Flavor_nameEN %>">
+        <%= flavor_data[count].Flavor_nameEN %>
+      </option>
+
+      <% } %>
+  </select>
+
+  <select name="package" id="package">
+    <option value="">Select Package</option>
+
+    <% for(var count=0; count < package_data.length; count++) { %>
+
+      <option value="<%= package_data[count].Package_nameEN %>">
+        <%= package_data[count].Package_nameEN %>
+      </option>
+
+      <% } %>
+  </select>
+
+  <select name="topping" id="topping">
+    <option value="">Select Topping</option>
+
+    <% for(var count=0; count < topping_data.length; count++) { %>
+
+      <option value="<%= topping_data[count].Topping_nameEN %>">
+        <%= topping_data[count].Topping_nameEN %>
+      </option>
+
+      <% } %>
+  </select>
+
+
+</body>
+
 </html>

@@ -10,13 +10,15 @@
 
 <body>
 
-  <div class="navbar">
-    <ul>
-      <li :firstchild><a href="#home">HOME</a></li>
-      <li><a href="#menu">MENU</a></li>
-      <li><a href="#news">NEWS</a></li>
-      <li :lastchild style="float:right"><a class="active" href="#about">ABOUT</a></li>
-    </ul>
+  <div class="main-container">
+    <div class="navbar">
+      <ul class="fixed-nav">
+        <li :firstchild><a href="#home">HOME</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#news">NEWS</a></li>
+        <li :lastchild><a class="active" href="#about">ABOUT</a></li>
+      </ul>
+    </div>
   </div>
 
   <select name="flavor" id="flavor">

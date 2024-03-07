@@ -19,48 +19,86 @@
   src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 
-body {
-  font-family: 'Open Sans';
-  background-color: #f8f7f6;
-  padding:0px;
-  margin:0px;
+/* Define keyframes */
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.main-container{
-  overflow: hidden;
-  background-color: #C5B397;
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/screen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.navbar a {
-  float: right;
-  font-size: 16px;
-  color: rgb(0, 0, 0);
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.button {
+  background-color: #921c0b;
+  border: none;
+  color: white;
+  padding: 15px 55px;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  float: right;
-}
-
-.navbar li {
-  float: left;
-  padding: 10px;
-}
-
-.navbar li a{
   display: inline-block;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  border-radius: 25px;
+  position: fixed;
+  bottom: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
 
-/* li a:hover{
-  background-color: red;
-} */
+.button #f-line{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1.8vw;
+}
 
+.button #s-line{
+    font-family: 'Open Sans';
+    font-size: 1.2vw;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

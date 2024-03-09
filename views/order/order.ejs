@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/order/order.css" type="text/css" />
+  </head>
+
+  <body>
+    
+    <body>
+      <img id="logo" src="/images/order/LOGO-white.png" alt="">
+      <table>
+          <tr>
+              <td>
+                <img class="txt" src="/images/order/txt-flavor.png" alt="">
+              </td>
+              <td>
+                <img class="txt" src="/images/order/txt-topping.png" alt="">
+              </td>
+              <td>
+                <img class="txt" src="/images/order/txt-sauce.png" alt=""> 
+              </td>
+              <td>
+                <img class="txt" src="/images/order/txt-package.png" alt="">
+              </td>
+            </tr>
+          <tr>
+            <td>
+              <img class="section" src="/images/order/flavor.png" alt="" onclick="goToFlavor()">
+            </td>
+            <td>
+              <img class="section" src="/images/order/topping.png" alt="" onclick="goToTopping()">
+            </td>
+            <td>
+              <img class="section" src="/images/order/sauce.png" alt="" onclick="goToSauce()"> 
+            </td>
+            <td>
+              <img class="section" src="/images/order/packaging.jpg" alt="" onclick="goToPackage()">
+            </td>
+          </tr>
+          <tr>
+              <td>
+                  <button class="button" id ='flavor' type="button" style="vertical-align:middle" onclick="goToFlavor()">
+                      Flavor
+                  </button>
+              </td>
+              <td>
+                  <button class="button" id ='topping' type="button" style="vertical-align:middle" onclick="goToTopping()">
+                      Topping
+                  </button>
+              </td>
+              <td>
+                  <button class="button" id ='sauce' type="button" style="vertical-align:middle" onclick="goToSauce()">
+                      Sauce
+                  </button>
+              </td>
+              <td>
+                  <button class="button" id ='packaging' type="button" style="vertical-align:middle" onclick="goToPackage()">
+                      Packaging
+                  </button>
+              </td>
+          </tr>
+      </table>
+  
+  </body>
+
+  </body>
+
+  <script src="/javascripts/order.js"></script>
+
+</html>

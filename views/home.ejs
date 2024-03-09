@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/index.css" type="text/css" />
-  </head>
 
-  <body>
-    
-    <h1>Page 2</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/home.css" type="text/css" />
+</head>
 
-  </body>
+<body>
+
+  <a href="/home"><img id='logo' src="/images/home/LOGO-white.png" alt=""></a>
+
+  <div class="container">
+    <img id="main-pic" src="/images/home/homecopy.jpg" alt="">
+  </div>
+
+  <div class="ice">
+    <button class="button1" type="button" style="vertical-align:middle">
+      Without ice cream, there would be darkness and chaos.
+    </button>
+  </div>
+
+  <div class="container">
+    <img id="reccom" src="/images/home/recommend.png" alt="">
+  </div>
+
+  <table>
+    <tr>
+      <td>
+        VANILLA FLAVOR
+      </td>
+      <td>
+        COOKIE & CREAM FLAVOR
+      </td>
+      <td>
+        CHOCOLATE FLAVOR
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>
+        <img class="section" src="/images/home/ic-vani.webp" alt="">
+      </td>
+      <td>
+        <img class="section" src="/images/home/ic-cookievani.webp" alt="">
+      </td>
+      <td>
+        <img class="section" src="/images/home/ic-choc.jpg" alt="">
+      </td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <img id='foot' src="/images/home/home2copy.png" alt="">
+  </div>
+
+  <div class="order">
+    <button class="button2" type="button" style="vertical-align:middle" onclick="goToOrder()">
+      ORDER NOW
+    </button>
+  </div>
+
+</body>
+
+<script src="/javascripts/home.js"></script>
 
 </html>
